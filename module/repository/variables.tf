@@ -103,6 +103,7 @@ variable "branches_protection" {
     object({
       branch                                     = string,
       enforce_admins                             = bool,
+      require_signed_commits                     = bool,
       status_check-strict                        = bool,
       status_check-contexts                      = list(string),
       pr_reviews-required_approving_review_count = number

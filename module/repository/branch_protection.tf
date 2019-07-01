@@ -6,6 +6,8 @@ resource "github_branch_protection" "main" {
 
   enforce_admins = var.branches_protection[count.index].enforce_admins
 
+  require_signed_commits = var.branches_protection[count.index].require_signed_commits
+
   required_status_checks {
     strict   = var.branches_protection[count.index].status_check-strict
     contexts = var.branches_protection[count.index].status_check-contexts
