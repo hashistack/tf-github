@@ -15,6 +15,7 @@ module "tf-github" {
     {
       branch                                     = "master"
       enforce_admins                             = true
+      require_signed_commits                     = true
       status_check-strict                        = true
       status_check-contexts                      = ["continuous-integration/travis-ci"]
       pr_reviews-required_approving_review_count = 1
@@ -58,6 +59,7 @@ module "ansible_role-consul" {
     {
       branch                                     = "master"
       enforce_admins                             = true
+      require_signed_commits                     = true
       status_check-strict                        = true
       status_check-contexts                      = []
       pr_reviews-required_approving_review_count = 1
@@ -90,6 +92,7 @@ module "ansible_role-nomad" {
     {
       branch                                     = "master"
       enforce_admins                             = true
+      require_signed_commits                     = true
       status_check-strict                        = true
       status_check-contexts                      = []
       pr_reviews-required_approving_review_count = 1
@@ -122,6 +125,7 @@ module "ansible_role-vault" {
     {
       branch                                     = "master"
       enforce_admins                             = true
+      require_signed_commits                     = true
       status_check-strict                        = true
       status_check-contexts                      = []
       pr_reviews-required_approving_review_count = 1
@@ -154,6 +158,7 @@ module "packer-master" {
     {
       branch                                     = "master"
       enforce_admins                             = true
+      require_signed_commits                     = true
       status_check-strict                        = true
       status_check-contexts                      = []
       pr_reviews-required_approving_review_count = 1
@@ -186,6 +191,7 @@ module "packer-agent" {
     {
       branch                                     = "master"
       enforce_admins                             = true
+      require_signed_commits                     = true
       status_check-strict                        = true
       status_check-contexts                      = []
       pr_reviews-required_approving_review_count = 1
