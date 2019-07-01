@@ -16,7 +16,7 @@ module "tf-github" {
       branch                                     = "master"
       enforce_admins                             = true
       status_check-strict                        = true
-      status_check-contexts                      = ["ci/travis"]
+      status_check-contexts                      = ["continuous-integration/travis-ci"]
       pr_reviews-required_approving_review_count = 1
       pr_reviews-require_code_owner_reviews      = true
       pr_reviews-dismiss_stale_reviews           = true
