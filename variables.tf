@@ -15,47 +15,47 @@ variable "default-issue_labels" {
     },
     {
       name        = "status/mergeable"
-      color       = "d93f0b"
+      color       = "009800"
       description = "status: mergeable"
     },
     {
       name        = "status/reviewable"
-      color       = "d93f0b"
+      color       = "1d76db"
       description = "status: reviewable"
     },
     {
       name        = "status/wip"
-      color       = "d93f0b"
+      color       = "ffdd88"
       description = "status: wip"
     },
     {
       name        = "type/chore"
-      color       = "d93f0b"
+      color       = "84b6eb"
       description = "type: chore"
     },
     {
       name        = "type/feat"
-      color       = "d93f0b"
+      color       = "1abc9c"
       description = "type: feat"
     },
     {
       name        = "type/fix"
-      color       = "d93f0b"
+      color       = "fbca04"
       description = "type: fix"
     },
     {
       name        = "type/question"
-      color       = "d93f0b"
+      color       = "c7def8"
       description = "type: question"
     },
     {
       name        = "type/refactor"
-      color       = "d93f0b"
+      color       = "5319e7"
       description = "type: refactor"
     },
     {
       name        = "type/test"
-      color       = "d93f0b"
+      color       = "cccccc"
       description = "type: test"
     }
   ]
