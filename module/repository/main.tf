@@ -20,7 +20,7 @@ resource "github_repository" "main" {
   gitignore_template = var.repository-gitignore_template
   license_template   = var.repository-license_template
 
-  default_branch = var.repository-default_branch
+  default_branch = (var.repository-default_branch != "master" ? var.repository-default_branch : null)
 
   archived = var.repository-archived
 
