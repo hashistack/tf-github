@@ -10,6 +10,10 @@ output "ansible_role-consul-ssh_clone_url" {
   value = module.ansible_role-consul.repository-ssh_clone_url
 }
 
+output "ansible_role-dnsmasq-ssh_clone_url" {
+  value = module.ansible_role-dnsmasq.repository-ssh_clone_url
+}
+
 output "ansible_role-nomad-ssh_clone_url" {
   value = module.ansible_role-nomad.repository-ssh_clone_url
 }
