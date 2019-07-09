@@ -111,6 +111,40 @@ module "ansible_role-consul" {
   repository-issue_labels = concat(var.default-issue_labels)
 }
 
+module "ansible_role-dnsmasq" {
+  source = "./module/repository/"
+
+  repository-name        = "ansible_role-dnsmasq"
+  repository-description = "ansible role to install and configure dnsmasq"
+  repository-topics      = ["ansible", "ansible-role", "dnsmasq"]
+
+  repository-private = false
+
+  repository-auto_init      = true
+  repository-default_branch = "master"
+
+  repository-license_template = "mit"
+
+  branches_protection = [
+    {
+      branch                                     = "master"
+      enforce_admins                             = true
+      require_signed_commits                     = true
+      status_check-strict                        = true
+      status_check-contexts                      = []
+      pr_reviews-required_approving_review_count = 1
+      pr_reviews-require_code_owner_reviews      = true
+      pr_reviews-dismiss_stale_reviews           = true
+      pr_reviews-dismissal_users                 = []
+      pr_reviews-dismissal_teams                 = [module.owner.slug, module.maintainer.slug]
+      restrictions-users                         = []
+      restrictions-teams                         = []
+    }
+  ]
+
+  repository-issue_labels = concat(var.default-issue_labels)
+}
+
 module "ansible_role-nomad" {
   source = "./module/repository/"
 
