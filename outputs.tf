@@ -6,6 +6,10 @@ output "tf-hashistack-ssh_clone_url" {
   value = module.tf-hashistack.repository-ssh_clone_url
 }
 
+output "ansible_role-docker-ssh_clone_url" {
+  value = module.ansible_role-docker.repository-ssh_clone_url
+}
+
 output "ansible_role-consul-ssh_clone_url" {
   value = module.ansible_role-consul.repository-ssh_clone_url
 }
