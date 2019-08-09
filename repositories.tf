@@ -234,7 +234,7 @@ module "packer-cluster_scheduler" {
       enforce_admins                             = true
       require_signed_commits                     = true
       status_check-strict                        = true
-      status_check-contexts                      = []
+      status_check-contexts                      = ["continuous-integration/travis-ci"]
       pr_reviews-required_approving_review_count = 1
       pr_reviews-require_code_owner_reviews      = true
       pr_reviews-dismiss_stale_reviews           = true
@@ -242,6 +242,17 @@ module "packer-cluster_scheduler" {
       pr_reviews-dismissal_teams                 = [module.owner.slug, module.maintainer.slug]
       restrictions-users                         = []
       restrictions-teams                         = []
+    }
+  ]
+
+  # webhooks
+  webhooks = [
+    {
+      url          = "https://notify.travis-ci.org"
+      content_type = "form"
+      insecure_ssl = false
+      active       = true
+      events       = ["create", "delete", "issue_comment", "member", "public", "pull_request", "push", "repository"]
     }
   ]
 
@@ -268,7 +279,7 @@ module "packer-cluster_node" {
       enforce_admins                             = true
       require_signed_commits                     = true
       status_check-strict                        = true
-      status_check-contexts                      = []
+      status_check-contexts                      = ["continuous-integration/travis-ci"]
       pr_reviews-required_approving_review_count = 1
       pr_reviews-require_code_owner_reviews      = true
       pr_reviews-dismiss_stale_reviews           = true
@@ -276,6 +287,17 @@ module "packer-cluster_node" {
       pr_reviews-dismissal_teams                 = [module.owner.slug, module.maintainer.slug]
       restrictions-users                         = []
       restrictions-teams                         = []
+    }
+  ]
+
+  # webhooks
+  webhooks = [
+    {
+      url          = "https://notify.travis-ci.org"
+      content_type = "form"
+      insecure_ssl = false
+      active       = true
+      events       = ["create", "delete", "issue_comment", "member", "public", "pull_request", "push", "repository"]
     }
   ]
 
